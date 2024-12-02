@@ -7,6 +7,8 @@ This Demo describes the outcome of an On Week (11/25-11/27 2024) project descriv
 ```mermaid
 %%{init: {'theme': 'dark'}}%%
 graph LR
+    classDef default width:200px,height:100px;
+
     A[Puppet Agent] -->|"1: Facts"| B[Puppet Server]
     B -->|"2: Store Facts"| C[PuppetDB]
     B -->|"3: Catalog"| A
