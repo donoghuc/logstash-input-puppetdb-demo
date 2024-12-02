@@ -5,47 +5,23 @@ This Demo describes the outcome of an On Week (11/25-11/27 2024) project descriv
 ## PuppetDB verview
 
 ```mermaid
-flowchart LR
-    subgraph Agent["Puppet Agent"]
-        facts["Facts"]
-    end
+graph LR
+    A[Puppet Agent] -->|"Step 1: Facts"| B[Puppet Server]
+    B -->|"Step 2: Store Facts"| C[PuppetDB]
+    B -->|"Step 3: Catalog"| A
+    A -->|"Step 4: Report"| B
+    B -->|"Step 5: Store"| C
 
-    subgraph Server["Puppet Server"]
-        compiler["Catalog Compiler"]
-    end
-
-    subgraph DB["PuppetDB"]
-        stored_facts["Stored Facts"]
-        stored_reports["Stored Reports"]
-        stored_resources["Stored Resources"]
-    end
-
-    %% Facts flow
-    facts -->|"1. Facts Upload"| Server
-    Server -->|"2. Store Facts"| stored_facts
-
-    %% Catalog compilation and application
-    Server -->|"3. Compile Catalog"| compiler
-    compiler -->|"4. Return Catalog"| Agent
-
-    %% Report flow
-    Agent -->|"5. Send Report"| Server
-    Server -->|"6. Store Report"| stored_reports
-
-    %% Resource recording
-    Server -->|"7. Store Resources"| stored_resources
-
-    style Agent fill:#e6f3ff,stroke:#4a90e2
-    style Server fill:#f5e6ff,stroke:#9b59b6
-    style DB fill:#e6ffe6,stroke:#2ecc71
+    style A fill:#e6f3ff,stroke:#4a90e2
+    style B fill:#f5e6ff,stroke:#9b59b6
+    style C fill:#e6ffe6,stroke:#2ecc71
 ```
-1. Puppet agent collects facts about the system and sends them to the Puppet server
-2. Puppet server stores these facts in PuppetDB
-3. Perver compiles a catalog for the agent
-4. Catalog is sent back to the agent for application
-5. After applying the catalog, the agent sends a report back to the server
-6. The server stores the report in PuppetDB
-7. Resource data is also stored in PuppetDB for querying
+
+1. Agent collects system facts and sends them to Puppet Server
+2. Server stores these facts in PuppetDB for later querying
+3. Server compiles and sends a catalog tailored for this agent
+4. After applying changes, agent sends a report back to server
+5. Server stores the report and resource data in PuppetDB for tracking and querying
 
 - With this architecture a wealth of information is stored in PuppetDB (we will focus first on `facts`, `catalogs`, and `reports`).
 
