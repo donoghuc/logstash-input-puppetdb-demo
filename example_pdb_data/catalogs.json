@@ -1,0 +1,463 @@
+[
+  {
+    "catalog_uuid": "23d979b6-a4c2-49e1-8832-f0cee7a6d18d",
+    "producer": "puppet",
+    "hash": "b675e7762fa305ca9a2b926a7fa2b530f041fb1a",
+    "transaction_uuid": "77b56e07-03c8-498b-a08e-47efe0573a70",
+    "producer_timestamp": "2024-12-02T16:12:34.834Z",
+    "environment": "production",
+    "code_id": null,
+    "version": "1733155954",
+    "resources": {
+      "data": [
+        {
+          "resource": "aa51f76bfb85212a1f41833ee374b0bb63c4547a",
+          "type": "Package",
+          "title": "curl",
+          "tags": [
+            "curl",
+            "package",
+            "class",
+            "profile",
+            "base",
+            "profile::base",
+            "__node_regexp__agent1-2",
+            "node"
+          ],
+          "exported": false,
+          "file": "/etc/puppetlabs/code/environments/production/modules/profile/manifests/base.pp",
+          "line": 20,
+          "parameters": {
+            "ensure": "present",
+            "require": "Exec[apt-update]"
+          }
+        },
+        {
+          "resource": "5ce9e1d89bb73737d5bd31890d2953283e801b7c",
+          "type": "Package",
+          "title": "apache2",
+          "tags": [
+            "package",
+            "class",
+            "profile",
+            "apache2",
+            "profile::webserver",
+            "__node_regexp__agent1-2",
+            "webserver",
+            "node"
+          ],
+          "exported": false,
+          "file": "/etc/puppetlabs/code/environments/production/modules/profile/manifests/webserver.pp",
+          "line": 2,
+          "parameters": {
+            "ensure": "present"
+          }
+        },
+        {
+          "resource": "d2ffa8c2807a26c73f506dadd6c1f33c7dfbb766",
+          "type": "Exec",
+          "title": "apt-update",
+          "tags": [
+            "class",
+            "profile",
+            "base",
+            "profile::base",
+            "exec",
+            "apt-update",
+            "__node_regexp__agent1-2",
+            "node"
+          ],
+          "exported": false,
+          "file": "/etc/puppetlabs/code/environments/production/modules/profile/manifests/base.pp",
+          "line": 3,
+          "parameters": {
+            "command": "/usr/bin/apt-get update",
+            "returns": [
+              0,
+              100
+            ],
+            "logoutput": true
+          }
+        },
+        {
+          "resource": "34f6ca601912a218395fada31706290fa8a5f0ba",
+          "type": "Package",
+          "title": "wget",
+          "tags": [
+            "package",
+            "class",
+            "profile",
+            "base",
+            "profile::base",
+            "__node_regexp__agent1-2",
+            "wget",
+            "node"
+          ],
+          "exported": false,
+          "file": "/etc/puppetlabs/code/environments/production/modules/profile/manifests/base.pp",
+          "line": 20,
+          "parameters": {
+            "ensure": "present",
+            "require": "Exec[apt-update]"
+          }
+        },
+        {
+          "resource": "7d9a79e31f336b0b98b1e3de738aa2c5940c44df",
+          "type": "Class",
+          "title": "Profile::Base",
+          "tags": [
+            "class",
+            "profile",
+            "base",
+            "profile::base",
+            "__node_regexp__agent1-2",
+            "node"
+          ],
+          "exported": false,
+          "file": null,
+          "line": null,
+          "parameters": {}
+        },
+        {
+          "resource": "79b985ed9088c8c4e70769d9ecd10490f8d72fb8",
+          "type": "File",
+          "title": "/var/www/html",
+          "tags": [
+            "class",
+            "profile",
+            "profile::webserver",
+            "__node_regexp__agent1-2",
+            "webserver",
+            "file",
+            "node"
+          ],
+          "exported": false,
+          "file": "/etc/puppetlabs/code/environments/production/modules/profile/manifests/webserver.pp",
+          "line": 6,
+          "parameters": {
+            "mode": "0755",
+            "ensure": "directory"
+          }
+        },
+        {
+          "resource": "f6672cd9533f21ac8270c4cf0cb147506dfc04f0",
+          "type": "Class",
+          "title": "Profile::Webserver",
+          "tags": [
+            "class",
+            "profile",
+            "profile::webserver",
+            "__node_regexp__agent1-2",
+            "webserver",
+            "node"
+          ],
+          "exported": false,
+          "file": null,
+          "line": null,
+          "parameters": {}
+        },
+        {
+          "resource": "19f758a34555e7897f89df3f6f96f3c4a8185616",
+          "type": "Stage",
+          "title": "main",
+          "tags": [
+            "stage"
+          ],
+          "exported": false,
+          "file": null,
+          "line": null,
+          "parameters": {
+            "name": "main",
+            "alias": [
+              "main"
+            ]
+          }
+        },
+        {
+          "resource": "29fb4e51541d250e46e4233861adc22075ab9b12",
+          "type": "Node",
+          "title": "__node_regexp__agent1-2",
+          "tags": [
+            "class",
+            "__node_regexp__agent1-2",
+            "node"
+          ],
+          "exported": false,
+          "file": null,
+          "line": null,
+          "parameters": {}
+        },
+        {
+          "resource": "5f4eadcb02fd864d319ba4e08848a1566c19bf24",
+          "type": "File",
+          "title": "/etc/nginx/conf.d/status.conf",
+          "tags": [
+            "class",
+            "profile",
+            "profile::webserver",
+            "__node_regexp__agent1-2",
+            "webserver",
+            "file",
+            "node"
+          ],
+          "exported": false,
+          "file": "/etc/puppetlabs/code/environments/production/modules/profile/manifests/webserver.pp",
+          "line": 12,
+          "parameters": {
+            "ensure": "file",
+            "content": "# Generated at 2024-12-02 16:12:34\nserver {\n  listen 80;\n  location /status {\n    stub_status on;\n  }\n}\n"
+          }
+        },
+        {
+          "resource": "69448b89dcf295caadc754d08c19c702d73f3063",
+          "type": "Package",
+          "title": "nginx",
+          "tags": [
+            "package",
+            "class",
+            "profile",
+            "profile::webserver",
+            "nginx",
+            "__node_regexp__agent1-2",
+            "webserver",
+            "node"
+          ],
+          "exported": false,
+          "file": "/etc/puppetlabs/code/environments/production/modules/profile/manifests/webserver.pp",
+          "line": 2,
+          "parameters": {
+            "ensure": "present"
+          }
+        },
+        {
+          "resource": "02eedf3d0c02cba430c3e9b147a69d9fa5d15c60",
+          "type": "Class",
+          "title": "main",
+          "tags": [
+            "class"
+          ],
+          "exported": false,
+          "file": null,
+          "line": null,
+          "parameters": {
+            "name": "main",
+            "alias": [
+              "main"
+            ]
+          }
+        },
+        {
+          "resource": "3fa48ecbd844cdfa4b6e5c5c699dfc8c9b452838",
+          "type": "Class",
+          "title": "Settings",
+          "tags": [
+            "settings",
+            "class"
+          ],
+          "exported": false,
+          "file": null,
+          "line": null,
+          "parameters": {}
+        },
+        {
+          "resource": "692a875b4d27405f866e3ab1d10c1ef0a3f558c8",
+          "type": "Package",
+          "title": "vim",
+          "tags": [
+            "package",
+            "class",
+            "profile",
+            "base",
+            "profile::base",
+            "__node_regexp__agent1-2",
+            "vim",
+            "node"
+          ],
+          "exported": false,
+          "file": "/etc/puppetlabs/code/environments/production/modules/profile/manifests/base.pp",
+          "line": 20,
+          "parameters": {
+            "ensure": "present",
+            "require": "Exec[apt-update]"
+          }
+        },
+        {
+          "resource": "2796ddf650a4064c6bf7ac05e042eead1465a829",
+          "type": "File",
+          "title": "/etc/motd",
+          "tags": [
+            "class",
+            "profile",
+            "base",
+            "profile::base",
+            "__node_regexp__agent1-2",
+            "file",
+            "node"
+          ],
+          "exported": false,
+          "file": "/etc/puppetlabs/code/environments/production/modules/profile/manifests/base.pp",
+          "line": 9,
+          "parameters": {
+            "ensure": "file",
+            "content": "Welcome to \nNode Group: webserver\n"
+          }
+        },
+        {
+          "resource": "c4e45d65607f4a4b70980efd670940566b023662",
+          "type": "File",
+          "title": "/var/lib/node_status",
+          "tags": [
+            "class",
+            "profile",
+            "base",
+            "profile::base",
+            "__node_regexp__agent1-2",
+            "file",
+            "node"
+          ],
+          "exported": false,
+          "file": "/etc/puppetlabs/code/environments/production/modules/profile/manifests/base.pp",
+          "line": 25,
+          "parameters": {
+            "ensure": "file",
+            "content": "Last update: 2024-12-02 16:12:34\nUptime: 0:12 hours\n"
+          }
+        }
+      ],
+      "href": "/pdb/query/v4/catalogs/agent1.puppet/resources"
+    },
+    "certname": "agent1.puppet",
+    "edges": {
+      "data": [
+        {
+          "source_type": "Exec",
+          "source_title": "apt-update",
+          "target_type": "Package",
+          "target_title": "curl",
+          "relationship": "required-by"
+        },
+        {
+          "source_type": "Exec",
+          "source_title": "apt-update",
+          "target_type": "Package",
+          "target_title": "wget",
+          "relationship": "required-by"
+        },
+        {
+          "source_type": "Exec",
+          "source_title": "apt-update",
+          "target_type": "Package",
+          "target_title": "vim",
+          "relationship": "required-by"
+        },
+        {
+          "source_type": "Class",
+          "source_title": "Profile::Base",
+          "target_type": "File",
+          "target_title": "/var/lib/node_status",
+          "relationship": "contains"
+        },
+        {
+          "source_type": "Class",
+          "source_title": "Profile::Base",
+          "target_type": "File",
+          "target_title": "/etc/motd",
+          "relationship": "contains"
+        },
+        {
+          "source_type": "Class",
+          "source_title": "Profile::Base",
+          "target_type": "Exec",
+          "target_title": "apt-update",
+          "relationship": "contains"
+        },
+        {
+          "source_type": "Class",
+          "source_title": "Profile::Base",
+          "target_type": "Package",
+          "target_title": "vim",
+          "relationship": "contains"
+        },
+        {
+          "source_type": "Class",
+          "source_title": "Profile::Base",
+          "target_type": "Package",
+          "target_title": "curl",
+          "relationship": "contains"
+        },
+        {
+          "source_type": "Class",
+          "source_title": "Profile::Base",
+          "target_type": "Package",
+          "target_title": "wget",
+          "relationship": "contains"
+        },
+        {
+          "source_type": "Class",
+          "source_title": "Profile::Webserver",
+          "target_type": "File",
+          "target_title": "/etc/nginx/conf.d/status.conf",
+          "relationship": "contains"
+        },
+        {
+          "source_type": "Class",
+          "source_title": "Profile::Webserver",
+          "target_type": "Package",
+          "target_title": "nginx",
+          "relationship": "contains"
+        },
+        {
+          "source_type": "Class",
+          "source_title": "Profile::Webserver",
+          "target_type": "Package",
+          "target_title": "apache2",
+          "relationship": "contains"
+        },
+        {
+          "source_type": "Class",
+          "source_title": "Profile::Webserver",
+          "target_type": "File",
+          "target_title": "/var/www/html",
+          "relationship": "contains"
+        },
+        {
+          "source_type": "Stage",
+          "source_title": "main",
+          "target_type": "Class",
+          "target_title": "Profile::Webserver",
+          "relationship": "contains"
+        },
+        {
+          "source_type": "Stage",
+          "source_title": "main",
+          "target_type": "Class",
+          "target_title": "main",
+          "relationship": "contains"
+        },
+        {
+          "source_type": "Stage",
+          "source_title": "main",
+          "target_type": "Class",
+          "target_title": "Settings",
+          "relationship": "contains"
+        },
+        {
+          "source_type": "Stage",
+          "source_title": "main",
+          "target_type": "Class",
+          "target_title": "Profile::Base",
+          "relationship": "contains"
+        },
+        {
+          "source_type": "Class",
+          "source_title": "main",
+          "target_type": "Node",
+          "target_title": "__node_regexp__agent1-2",
+          "relationship": "contains"
+        }
+      ],
+      "href": "/pdb/query/v4/catalogs/agent1.puppet/edges"
+    },
+    "job_id": null
+  }
+]

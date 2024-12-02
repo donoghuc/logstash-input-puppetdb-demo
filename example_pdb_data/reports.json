@@ -1,0 +1,499 @@
+[
+  {
+    "catalog_uuid": "23d979b6-a4c2-49e1-8832-f0cee7a6d18d",
+    "receive_time": "2024-12-02T16:12:36.995Z",
+    "producer": "puppet",
+    "hash": "f58d5dfe0781e7e4e19953bd193a49ec10fd57b2",
+    "transaction_uuid": "77b56e07-03c8-498b-a08e-47efe0573a70",
+    "puppet_version": "8.10.0",
+    "noop": false,
+    "corrective_change": null,
+    "logs": {
+      "data": [
+        {
+          "file": null,
+          "line": null,
+          "tags": [
+            "info"
+          ],
+          "time": "2024-12-02T16:12:34.481Z",
+          "level": "info",
+          "source": "Puppet",
+          "message": "Using environment 'production'"
+        },
+        {
+          "file": null,
+          "line": null,
+          "tags": [
+            "info"
+          ],
+          "time": "2024-12-02T16:12:34.547Z",
+          "level": "info",
+          "source": "Puppet",
+          "message": "Retrieving pluginfacts"
+        },
+        {
+          "file": null,
+          "line": null,
+          "tags": [
+            "info"
+          ],
+          "time": "2024-12-02T16:12:34.577Z",
+          "level": "info",
+          "source": "Puppet",
+          "message": "Retrieving plugin"
+        },
+        {
+          "file": null,
+          "line": null,
+          "tags": [
+            "info"
+          ],
+          "time": "2024-12-02T16:12:34.615Z",
+          "level": "info",
+          "source": "Puppet",
+          "message": "Loading facts"
+        },
+        {
+          "file": null,
+          "line": null,
+          "tags": [
+            "notice"
+          ],
+          "time": "2024-12-02T16:12:34.731Z",
+          "level": "notice",
+          "source": "Puppet",
+          "message": "Requesting catalog from puppet:8140 (172.19.0.4)"
+        },
+        {
+          "file": null,
+          "line": null,
+          "tags": [
+            "notice"
+          ],
+          "time": "2024-12-02T16:12:34.851Z",
+          "level": "notice",
+          "source": "Puppet",
+          "message": "Catalog compiled by puppet"
+        },
+        {
+          "file": null,
+          "line": null,
+          "tags": [
+            "info"
+          ],
+          "time": "2024-12-02T16:12:35.000Z",
+          "level": "info",
+          "source": "Puppet",
+          "message": "Caching catalog for agent1.puppet"
+        },
+        {
+          "file": null,
+          "line": null,
+          "tags": [
+            "info"
+          ],
+          "time": "2024-12-02T16:12:35.007Z",
+          "level": "info",
+          "source": "Puppet",
+          "message": "Applying configuration version '1733155954'"
+        },
+        {
+          "file": "/etc/puppetlabs/code/environments/production/modules/profile/manifests/base.pp",
+          "line": 3,
+          "tags": [
+            "notice",
+            "exec",
+            "apt-update",
+            "class",
+            "profile::base",
+            "profile",
+            "base",
+            "node",
+            "__node_regexp__agent1-2",
+            "returns"
+          ],
+          "time": "2024-12-02T16:12:36.381Z",
+          "level": "notice",
+          "source": "/Stage[main]/Profile::Base/Exec[apt-update]/returns",
+          "message": "Hit:1 http://apt.puppet.com jammy InRelease"
+        },
+        {
+          "file": "/etc/puppetlabs/code/environments/production/modules/profile/manifests/base.pp",
+          "line": 3,
+          "tags": [
+            "notice",
+            "exec",
+            "apt-update",
+            "class",
+            "profile::base",
+            "profile",
+            "base",
+            "node",
+            "__node_regexp__agent1-2",
+            "returns"
+          ],
+          "time": "2024-12-02T16:12:36.382Z",
+          "level": "notice",
+          "source": "/Stage[main]/Profile::Base/Exec[apt-update]/returns",
+          "message": "Hit:2 http://ports.ubuntu.com/ubuntu-ports jammy InRelease"
+        },
+        {
+          "file": "/etc/puppetlabs/code/environments/production/modules/profile/manifests/base.pp",
+          "line": 3,
+          "tags": [
+            "notice",
+            "exec",
+            "apt-update",
+            "class",
+            "profile::base",
+            "profile",
+            "base",
+            "node",
+            "__node_regexp__agent1-2",
+            "returns"
+          ],
+          "time": "2024-12-02T16:12:36.382Z",
+          "level": "notice",
+          "source": "/Stage[main]/Profile::Base/Exec[apt-update]/returns",
+          "message": "Hit:3 http://ports.ubuntu.com/ubuntu-ports jammy-updates InRelease"
+        },
+        {
+          "file": "/etc/puppetlabs/code/environments/production/modules/profile/manifests/base.pp",
+          "line": 3,
+          "tags": [
+            "notice",
+            "exec",
+            "apt-update",
+            "class",
+            "profile::base",
+            "profile",
+            "base",
+            "node",
+            "__node_regexp__agent1-2",
+            "returns"
+          ],
+          "time": "2024-12-02T16:12:36.382Z",
+          "level": "notice",
+          "source": "/Stage[main]/Profile::Base/Exec[apt-update]/returns",
+          "message": "Hit:4 http://ports.ubuntu.com/ubuntu-ports jammy-backports InRelease"
+        },
+        {
+          "file": "/etc/puppetlabs/code/environments/production/modules/profile/manifests/base.pp",
+          "line": 3,
+          "tags": [
+            "notice",
+            "exec",
+            "apt-update",
+            "class",
+            "profile::base",
+            "profile",
+            "base",
+            "node",
+            "__node_regexp__agent1-2",
+            "returns"
+          ],
+          "time": "2024-12-02T16:12:36.382Z",
+          "level": "notice",
+          "source": "/Stage[main]/Profile::Base/Exec[apt-update]/returns",
+          "message": "Hit:5 http://ports.ubuntu.com/ubuntu-ports jammy-security InRelease"
+        },
+        {
+          "file": "/etc/puppetlabs/code/environments/production/modules/profile/manifests/base.pp",
+          "line": 3,
+          "tags": [
+            "notice",
+            "exec",
+            "apt-update",
+            "class",
+            "profile::base",
+            "profile",
+            "base",
+            "node",
+            "__node_regexp__agent1-2",
+            "returns"
+          ],
+          "time": "2024-12-02T16:12:36.382Z",
+          "level": "notice",
+          "source": "/Stage[main]/Profile::Base/Exec[apt-update]/returns",
+          "message": "Reading package lists..."
+        },
+        {
+          "file": "/etc/puppetlabs/code/environments/production/modules/profile/manifests/base.pp",
+          "line": 3,
+          "tags": [
+            "notice",
+            "exec",
+            "apt-update",
+            "class",
+            "profile::base",
+            "profile",
+            "base",
+            "node",
+            "__node_regexp__agent1-2"
+          ],
+          "time": "2024-12-02T16:12:36.382Z",
+          "level": "notice",
+          "source": "/Stage[main]/Profile::Base/Exec[apt-update]/returns",
+          "message": "executed successfully (corrective)"
+        },
+        {
+          "file": "/etc/puppetlabs/code/environments/production/modules/profile/manifests/base.pp",
+          "line": 25,
+          "tags": [
+            "notice",
+            "file",
+            "class",
+            "profile::base",
+            "profile",
+            "base",
+            "node",
+            "__node_regexp__agent1-2"
+          ],
+          "time": "2024-12-02T16:12:36.952Z",
+          "level": "notice",
+          "source": "/Stage[main]/Profile::Base/File[/var/lib/node_status]/content",
+          "message": "content changed '{sha256}11afb787806f572846821f8a0be01d8740b36ab8a1e7cea5a171ab726126a47d' to '{sha256}835f1432d9c84a44a9056a316bb59f973e2366f2ebb3a638f8759b73f428f318'"
+        },
+        {
+          "file": "/etc/puppetlabs/code/environments/production/modules/profile/manifests/webserver.pp",
+          "line": 12,
+          "tags": [
+            "notice",
+            "file",
+            "class",
+            "profile::webserver",
+            "profile",
+            "webserver",
+            "node",
+            "__node_regexp__agent1-2"
+          ],
+          "time": "2024-12-02T16:12:36.953Z",
+          "level": "notice",
+          "source": "/Stage[main]/Profile::Webserver/File[/etc/nginx/conf.d/status.conf]/content",
+          "message": "content changed '{sha256}aae717bcf82655771cdeab94d0bbc6c156351710e4d874cc994a3b12a1de4087' to '{sha256}2c7bafb8a9270b9cf13001bc4fd9d9094e801e3ed12c0d06f34c4ddefc81e71a'"
+        },
+        {
+          "file": null,
+          "line": null,
+          "tags": [
+            "notice"
+          ],
+          "time": "2024-12-02T16:12:36.956Z",
+          "level": "notice",
+          "source": "Puppet",
+          "message": "Applied catalog in 1.95 seconds"
+        }
+      ],
+      "href": "/pdb/query/v4/reports/f58d5dfe0781e7e4e19953bd193a49ec10fd57b2/logs"
+    },
+    "report_format": 12,
+    "start_time": "2024-12-02T16:12:34.478Z",
+    "producer_timestamp": "2024-12-02T16:12:36.987Z",
+    "type": "agent",
+    "cached_catalog_status": "not_used",
+    "end_time": "2024-12-02T16:12:36.956Z",
+    "resource_events": {
+      "data": [
+        {
+          "status": "success",
+          "timestamp": "2024-12-02T16:12:35.009+00:00",
+          "resource_type": "Exec",
+          "resource_title": "apt-update",
+          "property": "returns",
+          "corrective_change": null,
+          "new_value": "[\"0\", \"100\"]",
+          "old_value": "notrun",
+          "message": "executed successfully (corrective)",
+          "file": "/etc/puppetlabs/code/environments/production/modules/profile/manifests/base.pp",
+          "line": 3,
+          "containment_path": [
+            "Stage[main]",
+            "Profile::Base",
+            "Exec[apt-update]"
+          ],
+          "containing_class": "Profile::Base",
+          "name": "executed_command"
+        },
+        {
+          "status": "success",
+          "timestamp": "2024-12-02T16:12:36.948+00:00",
+          "resource_type": "File",
+          "resource_title": "/var/lib/node_status",
+          "property": "content",
+          "corrective_change": null,
+          "new_value": "e3NoYTI1Nn04MzVmMTQzMmQ5Yzg0YTQ0YTkwNTZhMzE2YmI1OWY5NzNlMjM2NmYyZWJiM2E2MzhmODc1OWI3M2Y0MjhmMzE4",
+          "old_value": "{sha256}11afb787806f572846821f8a0be01d8740b36ab8a1e7cea5a171ab726126a47d",
+          "message": "content changed '{sha256}11afb787806f572846821f8a0be01d8740b36ab8a1e7cea5a171ab726126a47d' to '{sha256}835f1432d9c84a44a9056a316bb59f973e2366f2ebb3a638f8759b73f428f318'",
+          "file": "/etc/puppetlabs/code/environments/production/modules/profile/manifests/base.pp",
+          "line": 25,
+          "containment_path": [
+            "Stage[main]",
+            "Profile::Base",
+            "File[/var/lib/node_status]"
+          ],
+          "containing_class": "Profile::Base",
+          "name": "content_changed"
+        },
+        {
+          "status": "success",
+          "timestamp": "2024-12-02T16:12:36.952+00:00",
+          "resource_type": "File",
+          "resource_title": "/etc/nginx/conf.d/status.conf",
+          "property": "content",
+          "corrective_change": null,
+          "new_value": "e3NoYTI1Nn0yYzdiYWZiOGE5MjcwYjljZjEzMDAxYmM0ZmQ5ZDkwOTRlODAxZTNlZDEyYzBkMDZmMzRjNGRkZWZjODFlNzFh",
+          "old_value": "{sha256}aae717bcf82655771cdeab94d0bbc6c156351710e4d874cc994a3b12a1de4087",
+          "message": "content changed '{sha256}aae717bcf82655771cdeab94d0bbc6c156351710e4d874cc994a3b12a1de4087' to '{sha256}2c7bafb8a9270b9cf13001bc4fd9d9094e801e3ed12c0d06f34c4ddefc81e71a'",
+          "file": "/etc/puppetlabs/code/environments/production/modules/profile/manifests/webserver.pp",
+          "line": 12,
+          "containment_path": [
+            "Stage[main]",
+            "Profile::Webserver",
+            "File[/etc/nginx/conf.d/status.conf]"
+          ],
+          "containing_class": "Profile::Webserver",
+          "name": "content_changed"
+        }
+      ],
+      "href": "/pdb/query/v4/reports/f58d5dfe0781e7e4e19953bd193a49ec10fd57b2/events"
+    },
+    "status": "changed",
+    "configuration_version": "1733155954",
+    "environment": "production",
+    "code_id": null,
+    "noop_pending": false,
+    "certname": "agent1.puppet",
+    "metrics": {
+      "data": [
+        {
+          "name": "changed",
+          "value": 3,
+          "category": "resources"
+        },
+        {
+          "name": "corrective_change",
+          "value": 1,
+          "category": "resources"
+        },
+        {
+          "name": "failed",
+          "value": 0,
+          "category": "resources"
+        },
+        {
+          "name": "failed_to_restart",
+          "value": 0,
+          "category": "resources"
+        },
+        {
+          "name": "out_of_sync",
+          "value": 3,
+          "category": "resources"
+        },
+        {
+          "name": "restarted",
+          "value": 0,
+          "category": "resources"
+        },
+        {
+          "name": "scheduled",
+          "value": 0,
+          "category": "resources"
+        },
+        {
+          "name": "skipped",
+          "value": 0,
+          "category": "resources"
+        },
+        {
+          "name": "total",
+          "value": 17,
+          "category": "resources"
+        },
+        {
+          "name": "catalog_application",
+          "value": 1.9506403340000134,
+          "category": "time"
+        },
+        {
+          "name": "config_retrieval",
+          "value": 0.12204345800000738,
+          "category": "time"
+        },
+        {
+          "name": "convert_catalog",
+          "value": 0.019223083999918344,
+          "category": "time"
+        },
+        {
+          "name": "exec",
+          "value": 1.372732875,
+          "category": "time"
+        },
+        {
+          "name": "fact_generation",
+          "value": 0.11524720900001739,
+          "category": "time"
+        },
+        {
+          "name": "file",
+          "value": 0.0047193339999999995,
+          "category": "time"
+        },
+        {
+          "name": "filebucket",
+          "value": 0.000019959,
+          "category": "time"
+        },
+        {
+          "name": "package",
+          "value": 0.000391042,
+          "category": "time"
+        },
+        {
+          "name": "plugin_sync",
+          "value": 0.06617054200000894,
+          "category": "time"
+        },
+        {
+          "name": "schedule",
+          "value": 0.00010675,
+          "category": "time"
+        },
+        {
+          "name": "total",
+          "value": 2.478084376,
+          "category": "time"
+        },
+        {
+          "name": "transaction_evaluation",
+          "value": 1.948433250999983,
+          "category": "time"
+        },
+        {
+          "name": "total",
+          "value": 3,
+          "category": "changes"
+        },
+        {
+          "name": "failure",
+          "value": 0,
+          "category": "events"
+        },
+        {
+          "name": "success",
+          "value": 3,
+          "category": "events"
+        },
+        {
+          "name": "total",
+          "value": 3,
+          "category": "events"
+        }
+      ],
+      "href": "/pdb/query/v4/reports/f58d5dfe0781e7e4e19953bd193a49ec10fd57b2/metrics"
+    },
+    "job_id": null
+  }
+]

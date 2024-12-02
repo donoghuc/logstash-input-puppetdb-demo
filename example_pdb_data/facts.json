@@ -1,0 +1,607 @@
+[
+  {
+    "certname": "agent1.puppet",
+    "environment": "production",
+    "name": "aio_agent_version",
+    "value": "8.10.0"
+  },
+  {
+    "certname": "agent1.puppet",
+    "environment": "production",
+    "name": "augeas",
+    "value": {
+      "version": "1.14.1"
+    }
+  },
+  {
+    "certname": "agent1.puppet",
+    "environment": "production",
+    "name": "clientcert",
+    "value": "agent1.puppet"
+  },
+  {
+    "certname": "agent1.puppet",
+    "environment": "production",
+    "name": "clientnoop",
+    "value": false
+  },
+  {
+    "certname": "agent1.puppet",
+    "environment": "production",
+    "name": "clientversion",
+    "value": "8.10.0"
+  },
+  {
+    "certname": "agent1.puppet",
+    "environment": "production",
+    "name": "disks",
+    "value": {
+      "vda": {
+        "size": "59.60 GiB",
+        "type": "hdd",
+        "vendor": "0x1af4",
+        "size_bytes": 63999836160
+      },
+      "vdb": {
+        "size": "502.59 MiB",
+        "type": "hdd",
+        "vendor": "0x1af4",
+        "size_bytes": 527003648
+      }
+    }
+  },
+  {
+    "certname": "agent1.puppet",
+    "environment": "production",
+    "name": "facterversion",
+    "value": "4.10.0"
+  },
+  {
+    "certname": "agent1.puppet",
+    "environment": "production",
+    "name": "filesystems",
+    "value": "btrfs,erofs,exfat,ext2,ext3,ext4,f2fs,iso9660,ntfs,ntfs3,squashfs,udf,vfat,xfs"
+  },
+  {
+    "certname": "agent1.puppet",
+    "environment": "production",
+    "name": "fips_enabled",
+    "value": false
+  },
+  {
+    "certname": "agent1.puppet",
+    "environment": "production",
+    "name": "identity",
+    "value": {
+      "gid": 0,
+      "uid": 0,
+      "user": "root",
+      "group": "root",
+      "privileged": true
+    }
+  },
+  {
+    "certname": "agent1.puppet",
+    "environment": "production",
+    "name": "is_virtual",
+    "value": false
+  },
+  {
+    "certname": "agent1.puppet",
+    "environment": "production",
+    "name": "kernel",
+    "value": "Linux"
+  },
+  {
+    "certname": "agent1.puppet",
+    "environment": "production",
+    "name": "kernelmajversion",
+    "value": "6.10"
+  },
+  {
+    "certname": "agent1.puppet",
+    "environment": "production",
+    "name": "kernelrelease",
+    "value": "6.10.11-linuxkit"
+  },
+  {
+    "certname": "agent1.puppet",
+    "environment": "production",
+    "name": "kernelversion",
+    "value": "6.10.11"
+  },
+  {
+    "certname": "agent1.puppet",
+    "environment": "production",
+    "name": "load_averages",
+    "value": {
+      "1m": 2.63,
+      "5m": 2.46,
+      "15m": 1.44
+    }
+  },
+  {
+    "certname": "agent1.puppet",
+    "environment": "production",
+    "name": "memory",
+    "value": {
+      "swap": {
+        "used": "0 bytes",
+        "total": "1.00 GiB",
+        "capacity": "0.00%",
+        "available": "1.00 GiB",
+        "used_bytes": 0,
+        "total_bytes": 1073737728,
+        "available_bytes": 1073737728
+      },
+      "system": {
+        "used": "4.78 GiB",
+        "total": "7.65 GiB",
+        "capacity": "62.44%",
+        "available": "2.87 GiB",
+        "used_bytes": 5131325440,
+        "total_bytes": 8217686016,
+        "available_bytes": 3086360576
+      }
+    }
+  },
+  {
+    "certname": "agent1.puppet",
+    "environment": "production",
+    "name": "mountpoints",
+    "value": {
+      "/proc/kcore": {
+        "filesystem": "tmpfs",
+        "capacity": "0%",
+        "size": "64.00 MiB",
+        "available_bytes": 67108864,
+        "device": "tmpfs",
+        "options": [
+          "rw",
+          "nosuid",
+          "size=65536k",
+          "mode=755"
+        ],
+        "available": "64.00 MiB",
+        "used_bytes": 0,
+        "size_bytes": 67108864,
+        "used": "0 bytes"
+      },
+      "/proc/scsi": {
+        "filesystem": "tmpfs",
+        "capacity": "0%",
+        "size": "3.83 GiB",
+        "available_bytes": 4108840960,
+        "device": "tmpfs",
+        "options": [
+          "ro",
+          "relatime"
+        ],
+        "available": "3.83 GiB",
+        "used_bytes": 0,
+        "size_bytes": 4108840960,
+        "used": "0 bytes"
+      },
+      "/dev/mqueue": {
+        "filesystem": "mqueue",
+        "capacity": "100%",
+        "size": "0 bytes",
+        "available_bytes": 0,
+        "device": "mqueue",
+        "options": [
+          "rw",
+          "nosuid",
+          "nodev",
+          "noexec",
+          "relatime"
+        ],
+        "available": "0 bytes",
+        "used_bytes": 0,
+        "size_bytes": 0,
+        "used": "0 bytes"
+      },
+      "/proc/timer_list": {
+        "filesystem": "tmpfs",
+        "capacity": "0%",
+        "size": "64.00 MiB",
+        "available_bytes": 67108864,
+        "device": "tmpfs",
+        "options": [
+          "rw",
+          "nosuid",
+          "size=65536k",
+          "mode=755"
+        ],
+        "available": "64.00 MiB",
+        "used_bytes": 0,
+        "size_bytes": 67108864,
+        "used": "0 bytes"
+      },
+      "/": {
+        "filesystem": "overlay",
+        "capacity": "81.15%",
+        "size": "58.37 GiB",
+        "available_bytes": 11209539584,
+        "device": "overlay",
+        "options": [
+          "rw",
+          "relatime",
+          "lowerdir=/var/lib/desktop-containerd/daemon/io.containerd.snapshotter.v1.overlayfs/snapshots/2730/fs:/var/lib/desktop-containerd/daemon/io.containerd.snapshotter.v1.overlayfs/snapshots/2607/fs:/var/lib/desktop-containerd/daemon/io.containerd.snapshotter.v1.overlayfs/snapshots/2599/fs:/var/lib/desktop-containerd/daemon/io.containerd.snapshotter.v1.overlayfs/snapshots/2185/fs:/var/lib/desktop-containerd/daemon/io.containerd.snapshotter.v1.overlayfs/snapshots/1229/fs",
+          "upperdir=/var/lib/desktop-containerd/daemon/io.containerd.snapshotter.v1.overlayfs/snapshots/2738/fs",
+          "workdir=/var/lib/desktop-containerd/daemon/io.containerd.snapshotter.v1.overlayfs/snapshots/2738/work"
+        ],
+        "available": "10.44 GiB",
+        "used_bytes": 48244842496,
+        "size_bytes": 62671097856,
+        "used": "44.93 GiB"
+      },
+      "/dev/shm": {
+        "filesystem": "tmpfs",
+        "capacity": "0%",
+        "size": "64.00 MiB",
+        "available_bytes": 67108864,
+        "device": "shm",
+        "options": [
+          "rw",
+          "nosuid",
+          "nodev",
+          "noexec",
+          "relatime",
+          "size=65536k"
+        ],
+        "available": "64.00 MiB",
+        "used_bytes": 0,
+        "size_bytes": 67108864,
+        "used": "0 bytes"
+      },
+      "/proc/keys": {
+        "filesystem": "tmpfs",
+        "capacity": "0%",
+        "size": "64.00 MiB",
+        "available_bytes": 67108864,
+        "device": "tmpfs",
+        "options": [
+          "rw",
+          "nosuid",
+          "size=65536k",
+          "mode=755"
+        ],
+        "available": "64.00 MiB",
+        "used_bytes": 0,
+        "size_bytes": 67108864,
+        "used": "0 bytes"
+      },
+      "/dev/pts": {
+        "filesystem": "devpts",
+        "capacity": "100%",
+        "size": "0 bytes",
+        "available_bytes": 0,
+        "device": "devpts",
+        "options": [
+          "rw",
+          "nosuid",
+          "noexec",
+          "relatime",
+          "gid=5",
+          "mode=620",
+          "ptmxmode=666"
+        ],
+        "available": "0 bytes",
+        "used_bytes": 0,
+        "size_bytes": 0,
+        "used": "0 bytes"
+      },
+      "/etc/hosts": {
+        "filesystem": "ext4",
+        "capacity": "81.15%",
+        "size": "58.37 GiB",
+        "available_bytes": 11209539584,
+        "device": "/dev/vda1",
+        "options": [
+          "rw",
+          "relatime",
+          "discard"
+        ],
+        "available": "10.44 GiB",
+        "used_bytes": 48244842496,
+        "size_bytes": 62671097856,
+        "used": "44.93 GiB"
+      },
+      "/etc/resolv.conf": {
+        "filesystem": "ext4",
+        "capacity": "81.15%",
+        "size": "58.37 GiB",
+        "available_bytes": 11209539584,
+        "device": "/dev/vda1",
+        "options": [
+          "rw",
+          "relatime",
+          "discard"
+        ],
+        "available": "10.44 GiB",
+        "used_bytes": 48244842496,
+        "size_bytes": 62671097856,
+        "used": "44.93 GiB"
+      },
+      "/sys/firmware": {
+        "filesystem": "tmpfs",
+        "capacity": "0%",
+        "size": "3.83 GiB",
+        "available_bytes": 4108840960,
+        "device": "tmpfs",
+        "options": [
+          "ro",
+          "relatime"
+        ],
+        "available": "3.83 GiB",
+        "used_bytes": 0,
+        "size_bytes": 4108840960,
+        "used": "0 bytes"
+      },
+      "/etc/hostname": {
+        "filesystem": "ext4",
+        "capacity": "81.15%",
+        "size": "58.37 GiB",
+        "available_bytes": 11209539584,
+        "device": "/dev/vda1",
+        "options": [
+          "rw",
+          "relatime",
+          "discard"
+        ],
+        "available": "10.44 GiB",
+        "used_bytes": 48244842496,
+        "size_bytes": 62671097856,
+        "used": "44.93 GiB"
+      },
+      "/dev": {
+        "filesystem": "tmpfs",
+        "capacity": "0%",
+        "size": "64.00 MiB",
+        "available_bytes": 67108864,
+        "device": "tmpfs",
+        "options": [
+          "rw",
+          "nosuid",
+          "size=65536k",
+          "mode=755"
+        ],
+        "available": "64.00 MiB",
+        "used_bytes": 0,
+        "size_bytes": 67108864,
+        "used": "0 bytes"
+      }
+    }
+  },
+  {
+    "certname": "agent1.puppet",
+    "environment": "production",
+    "name": "networking",
+    "value": {
+      "interfaces": {
+        "ip6tnl0": {
+          "mac": "00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00",
+          "mtu": 1452,
+          "physical": false,
+          "operational_state": "down"
+        },
+        "ip6gre0": {
+          "mac": "00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00",
+          "mtu": 1448,
+          "physical": false,
+          "operational_state": "down"
+        },
+        "ip6_vti0": {
+          "mac": "00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00",
+          "mtu": 1428,
+          "physical": false,
+          "operational_state": "down"
+        },
+        "ip_vti0": {
+          "mtu": 1480,
+          "physical": false,
+          "operational_state": "down"
+        },
+        "tunl0": {
+          "mtu": 1480,
+          "physical": false,
+          "operational_state": "down"
+        },
+        "lo": {
+          "ip": "127.0.0.1",
+          "bindings6": [
+            {
+              "flags": [
+                "permanent"
+              ],
+              "scope6": "host",
+              "address": "::1",
+              "netmask": "ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff",
+              "network": "::1"
+            }
+          ],
+          "mtu": 65536,
+          "bindings": [
+            {
+              "address": "127.0.0.1",
+              "netmask": "255.0.0.0",
+              "network": "127.0.0.0"
+            }
+          ],
+          "network6": "::1",
+          "netmask6": "ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff",
+          "ip6": "::1",
+          "physical": false,
+          "netmask": "255.0.0.0",
+          "network": "127.0.0.0",
+          "operational_state": "unknown",
+          "scope6": "host"
+        },
+        "eth0": {
+          "ip": "172.19.0.11",
+          "mac": "02:42:ac:13:00:0b",
+          "mtu": 1500,
+          "netmask": "255.255.0.0",
+          "network": "172.19.0.0",
+          "bindings": [
+            {
+              "address": "172.19.0.11",
+              "netmask": "255.255.0.0",
+              "network": "172.19.0.0"
+            }
+          ],
+          "physical": false,
+          "operational_state": "up"
+        },
+        "sit0": {
+          "mtu": 1480,
+          "physical": false,
+          "operational_state": "down"
+        },
+        "erspan0": {
+          "mtu": 1450,
+          "physical": false,
+          "operational_state": "down"
+        },
+        "gre0": {
+          "mtu": 1476,
+          "physical": false,
+          "operational_state": "down"
+        },
+        "gretap0": {
+          "mtu": 1462,
+          "physical": false,
+          "operational_state": "down"
+        }
+      },
+      "ip": "172.19.0.11",
+      "primary": "eth0",
+      "mtu": 1500,
+      "hostname": "agent1",
+      "fqdn": "agent1.puppet",
+      "netmask": "255.255.0.0",
+      "network": "172.19.0.0",
+      "domain": "puppet",
+      "mac": "02:42:ac:13:00:0b"
+    }
+  },
+  {
+    "certname": "agent1.puppet",
+    "environment": "production",
+    "name": "node_group",
+    "value": "webserver"
+  },
+  {
+    "certname": "agent1.puppet",
+    "environment": "production",
+    "name": "os",
+    "value": {
+      "name": "Ubuntu",
+      "distro": {
+        "id": "Ubuntu",
+        "release": {
+          "full": "22.04",
+          "major": "22.04"
+        },
+        "codename": "jammy",
+        "description": "Ubuntu 22.04.5 LTS"
+      },
+      "family": "Debian",
+      "release": {
+        "full": "22.04",
+        "major": "22.04"
+      },
+      "selinux": {
+        "enabled": false
+      },
+      "hardware": "aarch64",
+      "architecture": "aarch64"
+    }
+  },
+  {
+    "certname": "agent1.puppet",
+    "environment": "production",
+    "name": "partitions",
+    "value": {
+      "/dev/vda1": {
+        "size": "59.60 GiB",
+        "mount": "/etc/resolv.conf",
+        "size_bytes": 63998787584
+      }
+    }
+  },
+  {
+    "certname": "agent1.puppet",
+    "environment": "production",
+    "name": "path",
+    "value": "/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/opt/puppetlabs/bin"
+  },
+  {
+    "certname": "agent1.puppet",
+    "environment": "production",
+    "name": "processors",
+    "value": {
+      "isa": "aarch64",
+      "cores": 12,
+      "count": 12,
+      "models": [],
+      "threads": 1,
+      "extensions": [
+        "aarch64"
+      ],
+      "physicalcount": 1
+    }
+  },
+  {
+    "certname": "agent1.puppet",
+    "environment": "production",
+    "name": "puppetversion",
+    "value": "8.10.0"
+  },
+  {
+    "certname": "agent1.puppet",
+    "environment": "production",
+    "name": "ruby",
+    "value": {
+      "sitedir": "/opt/puppetlabs/puppet/lib/ruby/site_ruby/3.2.0",
+      "version": "3.2.5",
+      "platform": "aarch64-linux"
+    }
+  },
+  {
+    "certname": "agent1.puppet",
+    "environment": "production",
+    "name": "system_uptime",
+    "value": {
+      "days": 0,
+      "hours": 0,
+      "uptime": "0:12 hours",
+      "seconds": 721
+    }
+  },
+  {
+    "certname": "agent1.puppet",
+    "environment": "production",
+    "name": "timezone",
+    "value": "UTC"
+  },
+  {
+    "certname": "agent1.puppet",
+    "environment": "production",
+    "name": "trusted",
+    "value": {
+      "domain": "puppet",
+      "certname": "agent1.puppet",
+      "external": {},
+      "hostname": "agent1",
+      "extensions": {},
+      "authenticated": "remote"
+    }
+  },
+  {
+    "certname": "agent1.puppet",
+    "environment": "production",
+    "name": "virtual",
+    "value": "physical"
+  }
+]
