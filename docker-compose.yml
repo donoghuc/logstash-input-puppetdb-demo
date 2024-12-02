@@ -1,0 +1,140 @@
+services:
+  puppetdb:
+      image: ghcr.io/voxpupuli/puppetdb:latest
+      ports:
+        - "8080:8080"
+        - "8081:8081"
+      environment:
+        - PUPPETDB_POSTGRES_HOSTNAME=postgres
+        - PUPPETDB_PASSWORD=puppetdb
+        - PUPPETDB_USER=puppetdb
+        - CA_ALLOW_SUBJECT_ALT_NAMES=true
+        - PUPPETDB_SSL_PORT=8081
+        - PUPPETDB_SSL_HOST=0.0.0.0
+        - PUPPETDB_HOST=0.0.0.0
+        - HOSTCRL=/etc/puppetlabs/puppet/ssl/crl.pem
+      hostname: puppetdb
+      depends_on:
+        - postgres
+      volumes:
+        - ./puppet_ssl:/etc/puppetlabs/puppet/ssl/
+        - ./puppet_ca:/etc/puppetlabs/puppetserver/ca/
+      networks:
+        puppet_network:
+          aliases:
+            - puppetdb
+
+  puppetserver:
+    healthcheck:
+      test: ["CMD", "curl", "-k", "-f", "https://localhost:8140/status/v1/simple"]
+      interval: 10s
+      timeout: 5s
+      retries: 3
+      start_period: 30s
+    image: ghcr.io/voxpupuli/puppetserver:latest
+    ports:
+      - "8140:8140"
+    environment:
+      - PUPPETSERVER_HOSTNAME=puppet
+      - AUTOSIGN=true
+      - DNS_ALT_NAMES=puppet,puppetserver
+      - CA_ALLOW_SUBJECT_ALT_NAMES=true
+      - PUPPETSERVER_ENVIRONMENT_TIMEOUT=0
+    hostname: puppet
+    volumes:
+      - ./puppet_code:/etc/puppetlabs/code/
+      - ./puppet_ssl:/etc/puppetlabs/puppet/ssl/
+      - ./puppet_ca:/etc/puppetlabs/puppetserver/ca
+    networks:
+      puppet_network:
+        aliases:
+          - puppetserver
+          - puppet
+
+  postgres:
+      image: postgres:14
+      environment:
+        - POSTGRES_PASSWORD=puppetdb
+        - POSTGRES_USER=puppetdb
+        - POSTGRES_DB=puppetdb
+      volumes:
+        - postgres_data:/var/lib/postgresql/data
+        - ./postgres/init.sql:/docker-entrypoint-initdb.d/init.sql
+      networks:
+        - puppet_network
+
+  elasticsearch:
+    image: docker.elastic.co/elasticsearch/elasticsearch:8.12.0
+    environment:
+      - discovery.type=single-node
+      - ES_JAVA_OPTS=-Xms512m -Xmx512m
+      - xpack.security.enabled=false
+    ports:
+      - "9200:9200"
+    networks:
+      - puppet_network
+
+  kibana:
+    image: docker.elastic.co/kibana/kibana:8.12.0
+    ports:
+      - "5601:5601"
+    depends_on:
+      - elasticsearch
+    networks:
+      - puppet_network
+
+  # TODO: once we have a plugin published we can install it like the puppet_facter strategy mentioned throughout. 
+  # logstash:
+  #   build:
+  #     context: ./logstash
+  #     dockerfile: Dockerfile
+  #   volumes:
+  #     - ./logstash/pipeline:/usr/share/logstash/pipeline/:ro
+  #     - ./logstash/plugins:/usr/share/logstash/plugins/:rw
+  #     - ./puppet_ssl:/etc/puppetlabs/puppet/ssl:ro  # Use same SSL dir as other services
+  #   depends_on:
+  #     - elasticsearch
+  #     - puppetdb
+  #   networks:
+  #     - puppet_network
+  #   # For testing, remove
+  #   ports:
+  #     - "8085:8085"
+
+
+  puppet-agent-1: &puppet-agent
+    build:
+      context: ./puppet-agent
+      dockerfile: Dockerfile
+    environment:
+      - PUPPET_SERVER=puppet
+    hostname: agent1.puppet
+    networks:
+      - puppet_network
+    restart: on-failure
+    depends_on:
+      puppetserver:
+        condition: service_healthy
+
+  puppet-agent-2:
+    <<: *puppet-agent
+    hostname: agent2.puppet
+  puppet-agent-3:
+    <<: *puppet-agent
+    hostname: agent3.puppet
+  puppet-agent-4:
+    <<: *puppet-agent
+    hostname: agent4.puppet
+  puppet-agent-5:
+    <<: *puppet-agent
+    hostname: agent5.puppet
+  puppet-agent-6:
+    <<: *puppet-agent
+    hostname: agent6.puppet
+
+networks:
+  puppet_network:
+    driver: bridge
+
+volumes:
+  postgres_data:
