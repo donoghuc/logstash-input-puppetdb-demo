@@ -5,16 +5,17 @@ This Demo describes the outcome of an On Week (11/25-11/27 2024) project descriv
 ## PuppetDB verview
 
 ```mermaid
+%%{init: {'theme': 'dark'}}%%
 graph LR
-    A[Puppet Agent] -->|"Step 1: Facts"| B[Puppet Server]
-    B -->|"Step 2: Store Facts"| C[PuppetDB]
-    B -->|"Step 3: Catalog"| A
-    A -->|"Step 4: Report"| B
-    B -->|"Step 5: Store"| C
+    A[Puppet Agent] -->|"1: Facts"| B[Puppet Server]
+    B -->|"2: Store Facts"| C[PuppetDB]
+    B -->|"3: Catalog"| A
+    A -->|"4: Report"| B
+    B -->|"5: Store"| C
 
-    style A fill:#e6f3ff,stroke:#4a90e2
-    style B fill:#f5e6ff,stroke:#9b59b6
-    style C fill:#e6ffe6,stroke:#2ecc71
+    style A fill:#2D4059,stroke:#EA5455,color:#fff
+    style B fill:#EA5455,stroke:#fff,color:#fff
+    style C fill:#F07B3F,stroke:#fff,color:#fff
 ```
 
 1. Agent collects system facts and sends them to Puppet Server
